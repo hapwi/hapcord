@@ -1,0 +1,3 @@
+[submodule "src/userplugins"]
+  path = src/userplugins
+  url = git@github.com:hapwi/userplugins.git
