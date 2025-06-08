@@ -57,7 +57,7 @@ export interface Dev {
  */
 export const Devs = /* #__PURE__*/ Object.freeze({
     Ven: {
-        name: "Vee",
+        name: "V",
         id: 343383572805058560n
     },
     Hap: {
@@ -215,7 +215,7 @@ export const Devs = /* #__PURE__*/ Object.freeze({
     },
     axyie: {
         name: "'ax",
-        id: 273562710745284628n
+        id: 929877747151548487n,
     },
     pointy: {
         name: "pointy",
@@ -608,7 +608,11 @@ export const Devs = /* #__PURE__*/ Object.freeze({
     },
     samsam: {
         name: "samsam",
-        id: 836452332387565589n,
+        id: 400482410279469056n,
+    },
+    Cootshk: {
+        name: "Cootshk",
+        id: 921605971577548820n
     },
 } satisfies Record<string, Dev>);
 
@@ -1077,6 +1081,18 @@ export const EquicordDevs = Object.freeze({
     sliwka: {
         name: "sliwka",
         id: 1165286199628419129n,
+    },
+    bbgaming25k: {
+        name: "bbgaming25k",
+        id: 851222385528274964n,
+    },
+    davidkra230: {
+        name: "davidkra230",
+        id: 652699312631054356n,
+    },
+    GroupXyz: {
+        name: "GroupXyz",
+        id: 950033410229944331n
     },
 } satisfies Record<string, Dev>);
 
