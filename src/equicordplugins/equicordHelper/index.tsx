@@ -18,36 +18,27 @@
 
 import "@equicordplugins/_misc/styles.css";
 
-import { definePluginSettings } from "@api/Settings";
-import { disableStyle, enableStyle } from "@api/Styles";
 import { EquicordDevs } from "@utils/constants";
-import definePlugin, { OptionType } from "@utils/types";
+import definePlugin from "@utils/types";
 import { Forms } from "@webpack/common";
 
-import clanBadges from "../_misc/clanBadges.css?managed";
-
-const settings = definePluginSettings({
-    hideClanBadges: {
-        type: OptionType.BOOLEAN,
-        description: "Hide clan badges",
-        default: false,
-        onChange: value => {
-            if (value) enableStyle(clanBadges);
-            else disableStyle(clanBadges);
-        }
-    }
-});
 
 export default definePlugin({
     name: "EquicordHelper",
     description: "Fixes some misc issues with discord",
     authors: [EquicordDevs.thororen, EquicordDevs.nyx],
     settingsAboutComponent: () => <>
-        <Forms.FormText className="plugin-warning">
-            This Plugin is used for fixing misc issues with discord such as some crashes
+        <Forms.FormText className="plugin-warning" style={{ textAlign: "left" }}>
+            This plugin was created to allow us as the Equicord Team & Contributors
+            to fix miscellaneous issues Discord may run into or cause.
+            <br />
+            This includes but is not limited to:
+            <br />
+            - Unknown Resolution/FPS Fixed?
+            <br />
+            - Whitelists all domains in CSP
         </Forms.FormText>
     </>,
-    settings,
     required: true,
     patches: [
         // Fixes Unknown Resolution/FPS Crashing
@@ -64,11 +55,5 @@ export default definePlugin({
                 }
             ]
         }
-    ],
-    start() {
-        if (settings.store.hideClanBadges) enableStyle(clanBadges);
-    },
-    stop() {
-        if (settings.store.hideClanBadges) disableStyle(clanBadges);
-    }
+    ]
 });

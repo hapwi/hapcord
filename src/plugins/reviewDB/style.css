@@ -72,8 +72,8 @@
 .vc-rdb-review-comment {
     overflow-y: hidden;
     margin-top: 1px;
-    margin-bottom: var(--vc-rdb-spacing-size);
-    color: var(--text-normal);
+    margin-bottom: 8px;
+    color: var(--text-default);
     font-size: 15px;
 }
 
