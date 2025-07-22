@@ -17,8 +17,8 @@ import {
 } from "@api/ServerList";
 import { EquicordDevs } from "@utils/constants";
 import definePlugin from "@utils/types";
+import { Guild } from "@vencord/discord-types";
 import { Menu, React, useStateFromStores } from "@webpack/common";
-import { Guild } from "discord-types/general";
 
 import hiddenServersButton from "./components/HiddenServersButton";
 import { HiddenServersStore } from "./HiddenServersStore";
@@ -77,7 +77,7 @@ export default definePlugin({
             find: '("guildsnav")',
             replacement: [
                 {
-                    match: /(?<=#{intl::SERVERS}\),gap:"xs",children:.{0,100}?)(\i)(\.map\(.{5,30}\}\))/,
+                    match: /(\i)(\.map\(.{0,30}\}\),\i)/,
                     replace: "$self.useFilteredGuilds($1)$2"
                 },
                 // despite my best efforts, the above doesnt trigger a rerender
