@@ -1,7 +1,7 @@
 {
     "name": "equicord",
     "private": "true",
-    "version": "1.12.6",
+    "version": "1.12.7",
     "description": "The other cutest Discord client mod",
     "homepage": "https://github.com/Equicord/Equicord#readme",
     "bugs": {
@@ -25,6 +25,7 @@
         "watchWeb": "pnpm buildWeb --watch",
         "generatePluginJson": "tsx scripts/generatePluginList.ts",
         "generateEquicordPluginJson": "tsx scripts/generateEquicordPluginList.ts",
+        "generateVencordPluginJson": "tsx scripts/generateVencordPluginList.ts",
         "generateTypes": "tspc --emitDeclarationOnly --declaration --outDir packages/vencord-types --allowJs false",
         "inject": "node scripts/runInstaller.mjs -- --install",
         "uninject": "node scripts/runInstaller.mjs -- --uninstall",

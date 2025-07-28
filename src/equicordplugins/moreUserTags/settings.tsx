@@ -13,7 +13,7 @@ import { Tag, tags } from "./consts";
 import { TagSettings } from "./types";
 
 function SettingsComponent() {
-    const tagSettings = settings.store.tagSettings as TagSettings;
+    const tagSettings = (settings.store.tagSettings ??= {} as TagSettings);
     const { localTags } = Vencord.Plugins.plugins.MoreUserTags as any;
 
     tags.forEach(t => {
